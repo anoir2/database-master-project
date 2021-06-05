@@ -314,6 +314,22 @@ CREATE TABLE `spesa_include_prodotto` (
 #### NoSQL
 Di seguito sono presenti le strutture utilizzate per il Database NoSQL. La struttura delle collection differisce da quella delle tabelle SQL per sfruttare al meglio le proprietà di NoSQL.
 ##### Cliente
+###### Esempio
+```
+{
+    "nome": "Mario Rossi",
+    "anno_nascita": "1975-05-04 00:00:00",
+    "sesso": "M",
+    "reddito": 200421,
+    "CAP": 20085,
+    "via": "Via gasperi",
+    "civico": 119,
+    "citta": "Catania",
+    "provincia": "CT",
+    "regione": "Sicilia"
+}
+```
+###### Schema
 ```
 {
   "fields": [
@@ -446,6 +462,35 @@ Di seguito sono presenti le strutture utilizzate per il Database NoSQL. La strut
 ```
 
 ##### Spesa
+###### Esempio
+```
+{
+    "data": {
+        "$date": "2020-02-05T00:00:00.000Z"
+    },
+    "cliente": "VTLB4CB4GEI92KW5",
+    "totale": 3.2949999570846558,
+    "tipo_pagamento": "contanti",
+    "composizione_spesa": [{
+        "prodotto": 1,
+        "prezzo": 0.6299999952316284,
+        "quantita": 1
+    }, {
+        "prodotto": 5,
+        "prezzo": 0.5400000214576721,
+        "quantita": 1
+    }, {
+        "prodotto": 6,
+        "prezzo": 1.4249999523162842,
+        "quantita": 1
+    }, {
+        "prodotto": 7,
+        "prezzo": 0.699999988079071,
+        "quantita": 1
+    }]
+}
+```
+###### Schema
 ```
 {
   "fields": [
@@ -562,7 +607,25 @@ Di seguito sono presenti le strutture utilizzate per il Database NoSQL. La strut
 ```
 
 ##### Prodotto
-
+###### Esempio
+```
+{
+    "descrizione": "Biscotto Doria",
+    "costo_unitario": 0.4,
+    "prezzo": 0.8,
+    "categoria": "biscotti",
+    "promozione": [{
+        "data_inizio": {
+            "$date": "2020-03-01T00:00:00.000Z"
+        },
+        "data_fine": {
+            "$date": "2020-05-05T23:59:59.999Z"
+        },
+        "sconto": 10
+    }]
+}
+```
+###### Schema
 ```
 {
   "fields": [
