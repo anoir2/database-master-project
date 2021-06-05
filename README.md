@@ -163,23 +163,23 @@ le promozioni sono identificate univocamente dal prodotto, la data di inizio e d
 ### Modello Logico
 **Cliente**(<ins>CF</ins>, Nome, Anno_Nascita, Sesso, Reddito, CAP, Via, Civico, *Citta*)
 
->**Spesa**(<ins>N_Scontrino</ins>, Data, *Cliente*, *Pagamento*)
+**Spesa**(<ins>N_Scontrino</ins>, Data, *Cliente*, *Pagamento*)
 
->**Pagamento**(<ins>ID</ins>, Totale, Tipo)
+**Pagamento**(<ins>ID</ins>, Totale, Tipo)
 
->**Spesa_Include_Prodotto**(<ins>*Spesa*</ins>, <ins>*Prodotto*</ins>, Prezzo, Quantita)
+**Spesa_Include_Prodotto**(<ins>*Spesa*</ins>, <ins>*Prodotto*</ins>, Prezzo, Quantita)
 
->**Prodotto**(<ins>Codice</ins>, Descrizione, Costo_Unitario, Prezzo, *Categoria*)
+**Prodotto**(<ins>Codice</ins>, Descrizione, Costo_Unitario, Prezzo, *Categoria*)
 
->**Promozione**(<ins>*Prodotto*</ins>, <ins>Data_Inizio</ins>, Data_Fine, Sconto)
+**Promozione**(<ins>*Prodotto*</ins>, <ins>Data_Inizio</ins>, Data_Fine, Sconto)
 
->**Categoria**(<ins>ID</ins>, Nome, Descrizione)
+**Categoria**(<ins>ID</ins>, Nome, Descrizione)
 
->**Città**(<ins>ID</ins>, Nome, *Provincia*)
+**Città**(<ins>ID</ins>, Nome, *Provincia*)
 
->**Provincia**(<ins>Codice</ins>, Nome, *Regione*)
+**Provincia**(<ins>Codice</ins>, Nome, *Regione*)
 
->**Regione**(<ins>ID</ins>, Nome)
+**Regione**(<ins>ID</ins>, Nome)
 
 ### Modello Fisico
 #### SQL
